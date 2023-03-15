@@ -14,7 +14,7 @@ namespace archivosBinarios
             
             using (BinaryWriter writer = new BinaryWriter(File.Open("datos.bin", FileMode.Create)))
             {
-                // Escribimos un entero, una cadena y un double en el archivo
+                
                 writer.Write(42);
                 writer.Write("Hola, mundo!");
                 writer.Write(3.14);
@@ -23,7 +23,7 @@ namespace archivosBinarios
            
             using (BinaryReader reader = new BinaryReader(File.Open("datos.bin", FileMode.Open)))
             {
-                // Leemos los datos del archivo
+              
                 int entero = reader.ReadInt32();
                 string cadena = reader.ReadString();
                 double doble = reader.ReadDouble();
